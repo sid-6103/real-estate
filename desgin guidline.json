@@ -1,0 +1,178 @@
+{
+    "project_name": "Luxury 3D Real Estate Platform",
+    "theme_archetype": {
+        "theme": "dark",
+        "archetype": "5 (Jewel & Luxury)",
+        "vibe": "Expensive, cinematic, moody, architectural precision",
+        "reasoning": "High-end real estate requires an immersive, gallery-like experience. Dark themes with stark contrast allow property imagery and 3D architectural models to become the glowing centerpieces, evoking exclusivity."
+    },
+    "colors": {
+        "background": {
+            "primary": "#0A0A0C",
+            "secondary": "#111114",
+            "surface": "rgba(255, 255, 255, 0.03)",
+            "glass": "rgba(10, 10, 12, 0.6)"
+        },
+        "text": {
+            "primary": "#F3F3F1",
+            "secondary": "#A1A1A5",
+            "muted": "#707076"
+        },
+        "accent": {
+            "primary": "#C19A6B",
+            "primary_hover": "#D4B38A",
+            "subtle": "rgba(193, 154, 107, 0.1)"
+        },
+        "border": {
+            "default": "rgba(255, 255, 255, 0.08)",
+            "focus": "rgba(193, 154, 107, 0.4)"
+        },
+        "css_variables": {
+            "--background": "240 9% 4%",
+            "--foreground": "60 9% 95%",
+            "--card": "240 8% 6%",
+            "--card-foreground": "60 9% 95%",
+            "--popover": "240 8% 6%",
+            "--popover-foreground": "60 9% 95%",
+            "--primary": "33 42% 59%",
+            "--primary-foreground": "240 9% 4%",
+            "--secondary": "240 7% 12%",
+            "--secondary-foreground": "60 9% 95%",
+            "--muted": "240 5% 15%",
+            "--muted-foreground": "240 4% 65%",
+            "--accent": "33 42% 59%",
+            "--accent-foreground": "240 9% 4%",
+            "--destructive": "0 84% 60%",
+            "--destructive-foreground": "60 9% 95%",
+            "--border": "240 6% 14%",
+            "--input": "240 6% 14%",
+            "--ring": "33 42% 59%",
+            "--radius": "0px"
+        }
+    },
+    "typography": {
+        "fonts": {
+            "heading": "'Cormorant Garamond', serif",
+            "body": "'Outfit', sans-serif",
+            "mono": "'JetBrains Mono', monospace"
+        },
+        "scales": {
+            "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tighter leading-none",
+            "h2": "text-4xl sm:text-5xl font-light tracking-tight leading-tight",
+            "h3": "text-2xl sm:text-3xl font-normal tracking-tight",
+            "body": "text-base font-light tracking-wide leading-relaxed",
+            "overline": "text-xs font-medium uppercase tracking-[0.2em] text-[#C19A6B]",
+            "caption": "text-sm font-light text-secondary"
+        },
+        "rules": {
+            "anti_default": "Absolutely NO Inter, Roboto, or Space Grotesk. Headings must utilize the elegant weights of Cormorant Garamond.",
+            "alignment": "Left-align dense property specs. Center-align only high-impact hero text or standalone quotes."
+        }
+    },
+    "spacing_and_layout": {
+        "philosophy": "Generous Spacing Philosophy. Use 2-3x more padding than standard SaaS. Allow imagery and 3D space to breathe.",
+        "container_padding": "p-8 md:p-16 lg:p-24",
+        "grid_system": {
+            "type": "Mode A: The Tetris Grid",
+            "usage": "Use asymmetrical bento layouts for property features and image galleries.",
+            "gap": "gap-8 md:gap-12",
+            "classes": "grid grid-cols-1 md:grid-cols-12"
+        }
+    },
+    "components": {
+        "hero": {
+            "style": "Cinematic 3D Scene",
+            "layout": "min-h-[90vh] relative flex flex-col justify-end pb-24 px-8 md:px-16",
+            "3d_strategy": "React Three Fiber canvas as absolute background `z-0`. Use an abstract architectural model or slowly rotating dark geometric shapes (or a premium 3D home model if available).",
+            "overlay": "MANDATORY gradient overlay: `bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/60 to-transparent` covering the bottom 60% of the screen to ensure heading readability.",
+            "content": "Placed at the bottom left `z-10`, massive H1, an elegant overline, and an accent-colored outline button."
+        },
+        "header_nav": {
+            "style": "Crystal Glass",
+            "classes": "fixed top-0 left-0 w-full z-50 backdrop-blur-2xl bg-[#0A0A0C]/40 border-b border-white/5",
+            "layout": "flex justify-between items-center px-8 h-20",
+            "text": "Uppercase, highly tracked nav links. Primary CTA button should be a subtle glassy outline, not a solid block."
+        },
+        "property_cards": {
+            "style": "Sharp Edge Photography",
+            "classes": "group relative overflow-hidden bg-transparent border border-white/10 hover:border-white/20 transition-colors duration-500",
+            "image_treatment": "Image takes top 60% of card. Image must have `transition-transform duration-[1.5s] ease-out group-hover:scale-105`.",
+            "content_padding": "p-6",
+            "data_display": "Price in Cormorant Garamond. Specs (Beds, Baths, Sqft) in tiny uppercase Outfit with thin vertical dividers."
+        },
+        "property_detail_page": {
+            "layout": "Split-pane or staggered asymmetric sections.",
+            "360_viewer": "Main showcase section using a library like `react-photo-sphere-viewer` or custom R3F scene. Needs a 'Drag to explore' UI hint.",
+            "specs_panel": "Sticky right sidebar on desktop, utilizing a 1px grid border system (`border-collapse` look) to display raw data (Price, Year Built, Lot Size) cleanly.",
+            "gallery": "Masonry or bento-style asymmetrical image grid."
+        },
+        "buttons": {
+            "primary": "bg-transparent border border-[#C19A6B] text-[#C19A6B] hover:bg-[#C19A6B] hover:text-[#0A0A0C] transition-all duration-300 rounded-none px-8 py-4 uppercase tracking-widest text-xs",
+            "secondary": "bg-white/5 hover:bg-white/10 text-white backdrop-blur-md border border-white/10 transition-all rounded-none px-6 py-3"
+        }
+    },
+    "animations_and_motion": {
+        "scrolling": "MUST use `lenis` for premium momentum scrolling. This is critical for the luxury feel.",
+        "page_transitions": "Framer Motion: fade in and slow upward translation (`y: 20` to `y: 0`, `duration: 0.8`, `ease: [0.22, 1, 0.36, 1]`).",
+        "3d_interaction": "Tie 3D camera rotation slightly to mouse movement (`onPointerMove`) to give depth before clicking.",
+        "hover_states": "Buttons use slow color fills. Images use extremely slow 1.5s scale transforms to feel cinematic, not snappy."
+    },
+    "media_urls": {
+        "properties_exteriors": [
+            {
+                "url": "https://images.unsplash.com/photo-1757439402296-000be181e38b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwzfHxsdXh1cnklMjBtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBleHRlcmlvciUyMG5pZ2h0fGVufDB8fHx8MTc3NjQzNDczMnww&ixlib=rb-4.1.0&q=85",
+                "description": "Luxury resort pool area at night"
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1762337009787-bad651efb880?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBleHRlcmlvciUyMG5pZ2h0fGVufDB8fHx8MTc3NjQzNDczMnww&ixlib=rb-4.1.0&q=85",
+                "description": "Modern buildings illuminated at dusk"
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1765439178218-e54dcbb64bcb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxsdXh1cnklMjBtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBleHRlcmlvciUyMG5pZ2h0fGVufDB8fHx8MTc3NjQzNDczMnww&ixlib=rb-4.1.0&q=85",
+                "description": "Luxury architectural building at dusk"
+            }
+        ],
+        "interiors": [
+            {
+                "url": "https://images.pexels.com/photos/33685855/pexels-photo-33685855.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "description": "Elegant modern living room with stairs"
+            },
+            {
+                "url": "https://images.pexels.com/photos/34277650/pexels-photo-34277650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "description": "Spacious luxury living room with natural light"
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1690489965043-ec15758cce71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHw0fHxsdXh1cnklMjBpbnRlcmlvciUyMGRlc2lnbiUyMGxpdmluZyUyMHJvb218ZW58MHx8fHwxNzc2NDM0NzMyfDA&ixlib=rb-4.1.0&q=85",
+                "description": "Modern dining room"
+            }
+        ],
+        "abstract_hero_backgrounds": [
+            {
+                "url": "https://images.unsplash.com/photo-1759159347914-88541fa4bd14?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGFyY2hpdGVjdHVyZSUyMGRhcmslMjBiYWNrZ3JvdW5kfGVufDB8fHx8MTc3NjQzNDc0Mnww&ixlib=rb-4.1.0&q=85",
+                "description": "Abstract geometric pattern of dark blue cubes, use if 3D scene fails to load or as a fallback texture."
+            }
+        ],
+        "agents": [
+            {
+                "url": "https://images.pexels.com/photos/7642003/pexels-photo-7642003.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+                "description": "Smiling woman realtor"
+            },
+            {
+                "url": "https://images.unsplash.com/photo-1772987438485-ac832640c8a5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjByZWFsJTIwZXN0YXRlJTIwYWdlbnQlMjBwb3J0cmFpdHxlbnwwfHx8fDE3NzY0MzQ3NDJ8MA&ixlib=rb-4.1.0&q=85",
+                "description": "Professional agent portrait"
+            }
+        ]
+    },
+    "instructions_to_main_agent": [
+        "INSTALLATION: You must install @react-three/fiber, @react-three/drei, and three for the hero 3D experience.",
+        "INSTALLATION: Install @studio-freight/react-lenis for smooth scrolling.",
+        "INSTALLATION: Install framer-motion for UI animations.",
+        "INSTALLATION: Install react-photo-sphere-viewer for the 360 property tours (or implement a custom sphere in R3F).",
+        "DO NOT USE INTER, ROBOTO, OR SPACE GROTESK. Import Cormorant Garamond and Outfit from Google Fonts.",
+        "DO NOT USE PURPLE, TEAL, OR BRIGHT BLUE. Stick exclusively to the Obsidian Black and Warm Gold/Bronze palette provided.",
+        "BORDERS: All containers and cards must have crisp, sharp edges (`rounded-none` or at most `rounded-sm`). Real estate architecture favors sharp geometric precision over bubbly soft corners.",
+        "MOCK DATA: Create robust mock JSON data in the frontend for at least 6 properties to populate the grid and power the filtering system.",
+        "TESTING: Add `data-testid` attributes to all interactive elements (e.g., `data-testid=\"filter-price-button\"`, `data-testid=\"property-card-1\"`).",
+        "HERO OVERLAY: Do not skip the gradient overlay on the hero section. Text contrast against 3D scenes is critical."
+    ]
+}
