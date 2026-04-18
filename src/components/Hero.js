@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import HeroScene from '@/components/HeroScene';
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: (delay = 0) => ({
@@ -78,20 +78,20 @@ const Hero = () => {
           custom={0.8}
           variants={fadeInUp}
         >
-          <a
-            href="/properties"
+          <Link
+            to="/properties"
             data-testid="hero-cta-explore"
             className="border border-gold text-gold hover:bg-gold hover:text-[#0A0A0C] transition-all duration-300 px-8 py-4 uppercase tracking-[0.2em] text-xs font-body font-medium"
           >
             Explore Collection
-          </a>
-          <a
-            href="/showcase"
+          </Link>
+          <Link
+            to="/showcase"
             data-testid="hero-cta-showcase"
             className="bg-white/5 hover:bg-white/10 text-[#F3F3F1] backdrop-blur-md border border-white/10 transition-all duration-300 px-8 py-4 uppercase tracking-[0.2em] text-xs font-body"
           >
             3D Showcase
-          </a>
+          </Link>
         </motion.div>
       </div>
 
