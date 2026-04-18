@@ -18,7 +18,7 @@ const Hero = () => {
       <HeroScene />
 
       {/* Gradient Overlay - MANDATORY per design guidelines */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/60 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#0A0A0C] via-[#0A0A0C]/30 to-transparent" />
 
       {/* Grain texture */}
       <div

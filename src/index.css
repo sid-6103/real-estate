@@ -40,9 +40,10 @@
   }
 }
 
-/* Smooth scrolling */
+/* Lenis handles smooth scrolling – do NOT use scroll-behavior: smooth
+   as it conflicts and causes double-interpolation lag */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 /* Custom scrollbar */

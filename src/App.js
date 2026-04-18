@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { ReactLenis } from "@studio-freight/react-lenis";
+import { ReactLenis, useLenis } from "@studio-freight/react-lenis";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import HomePage from "@/pages/HomePage";
@@ -15,9 +15,15 @@ import ContactPage from "@/pages/ContactPage";
 /* ─── Scroll restoration on route change ─── */
 const ScrollToTop = () => {
   const { pathname } = useLocation();
+  const lenis = useLenis();
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    // Use Lenis API for scroll reset to avoid desyncing its internal state
+    if (lenis) {
+      lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, lenis]);
   return null;
 };
 
@@ -52,7 +58,7 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <ReactLenis root options={{ lerp: 0.07, duration: 1.0, smoothWheel: true }}>
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.2, smoothWheel: true, wheelMultiplier: 1.2 }}>
       <div className="App min-h-screen bg-[#0A0A0C]">
         <BrowserRouter>
           <ScrollToTop />
